@@ -114,6 +114,7 @@ function Issue(issueJson) {
       }
     });
   });
+  transitions.sort(function(a,b) { return a.date - b.date; })
   this.transitions = transitions;
 }
 
