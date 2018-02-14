@@ -109,6 +109,7 @@ app.post('/calculate', function(req, res) {
           }, []),
           errors: query.errors
         };
+        data.totalHours = _.sum(_.map(data.people, function(p) { return p.hours; }));
 
         res.render('index', data);
       }
